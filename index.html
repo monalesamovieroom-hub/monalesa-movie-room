@@ -3,440 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monalesa Movie Room | Movies & Entertainment</title>
-<meta name="description" content="Welcome to Monalesa Movie Room, your room for movies, reviews, recommendations and entertainment.">
-
+<title>Monalesa Movie Room</title>
+<meta name="description" content="Monalesa Movie Room - Your Room for Movies, Reviews & Entertainment.">
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #101010;
-  color: white;
-  line-height: 1.7;
-}
-
-header {
-  background: #080808;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #d4af37;
-}
-
-.logo {
-  color: #d4af37;
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-header p {
-  color: #ddd;
-  font-size: 13px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding: 15px;
-  background: #181818;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-:hover {
-  color: #d4af37;
-}
-
-.hero {
-  text-align: center;
-  padding: 90px 20px;
-  background: linear-gradient(135deg, #161616, #382b0d);
-}
-
-.hero h1 {
-  font-size: 38px;
-  color: #d4af37;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  color: #eee;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  background: #d4af37;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-section {
-  padding: 55px 20px;
-  text-align: center;
-}
-
-section h2 {
-  color: #d4af37;
-  margin-bottom: 20px;
-  font-size: 27px;
-}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monalesa Movie Room | Movies & Entertainment</title>
-<meta name="description" content="Welcome to Monalesa Movie Room, your room for movies, reviews, recommendations and entertainment.">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #101010;
-  color: white;
-  line-height: 1.7;
-}
-
-header {
-  background: #080808;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #d4af37;
-}
-
-.logo {
-  color: #d4af37;
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-header p {
-  color: #ddd;
-  font-size: 13px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding: 15px;
-  background: #181818;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #d4af37;
-}
-
-.hero {
-  text-align: center;
-  padding: 90px 20px;
-  background: linear-gradient(135deg, #161616, #382b0d);
-}
-
-.hero h1 {
-  font-size: 38px;
-  color: #d4af37;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  color: #eee;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  background: #d4af37;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-section {
-  padding: 55px 20px;
-  text-align: center;
-}
-
-section h2 {
-  color: #d4af37;
-  margin-bottom: 20px;
-  font-size: 27px;
-}
-
-.about, .contact {
-  max-width: 800px;
-  margin: auto;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 30px auto 0;
-}
-
-.card {
-  background: #202020;
-  padding: 28px 20px;
-  border: 1px solid #51421d;
-  border-radius: 10px;
-}
-
-.card h3 {
-  color: #d4af37;
-  margin-bottom: 12px;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.socials a {
-  color: #d4af37;
-  border: 1px solid #d4af37;
-  padding: 9px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.socials a:hover {
-  background: #d4af37;
-  color: black;
-}
-
-footer {
-  background: #080808;
-  padding: 25px;
-  text-align: center;
-  border-top: 1px solid #d4af37;
-  color: #bbb;
-  font-size: 13px;
-}
-
-footer span {
-  color: #d4af37;
-}
-
-@media(max-width:600px) {
-  .hero h1 {
-    font-size: 29px;
-  }
-  nav {
-    gap: 12px;
-  }
-}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#090909;color:#fff;font-family:Arial,sans-serif;line-height:1.7}
+header{background:#111;padding:25px 15px;text-align:center;border-bottom:2px solid #d4af37}
+header h1{color:#d4af37;font-size:30px;margin:0}
+header p{color:#eee;margin:5px}
+nav{padding:15px;text-align:center;background:#171717}
+nav a{color:#d4af37;text-decoration:none;margin:8px;font-size:14px}
+.hero{text-align:center;padding:75px 20px;background:linear-gradient(#000b,#000d),linear-gradient(135deg,#30240b,#080808)}
+.hero h2{font-size:34px;color:#d4af37}
+.hero p{max-width:650px;margin:15px auto}
+.button{display:inline-block;background:#d4af37;color:#111;padding:12px 22px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:12px}
+section{padding:45px 20px;text-align:center}
+h2{color:#d4af37}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.card{background:#171717;border:1px solid #6f5920;border-radius:9px;padding:22px;width:260px}
+.card h3{color:#d4af37}
+.social a{display:inline-block;background:#171717;color:#d4af37;border:1px solid #d4af37;padding:12px 18px;margin:7px;border-radius:5px;text-decoration:none}
+.social a:hover{background:#d4af37;color:#111}
+footer{background:#171717;text-align:center;padding:25px;color:#aaa;border-top:1px solid #d4af37}
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">MONALESA MOVIE ROOM</div>
-  <p>Your Room for Movies, Reviews & Entertainment</p>
+<h1>MONALESA MOVIE ROOM</h1>
+<p>Your Room for Movies, Reviews & Entertainment.</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#movies">Movies</a>
-  <a href="#social">Follow Us</a>
-  <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#explore">Explore</a>
+<a href="#social">Social Platforms</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <div class="hero" id="home">
-  <h1>Welcome to Monalesa Movie Room</h1>
-  <p>
-    Discover amazing movies, exciting dramas, unforgettable
-    stories, movie reviews and entertainment from around
-    the world.
-  </p>
-  <a href="#movies" class="button">Explore Our Movie World</a>
+<h2>Welcome to Monalesa Movie Room</h2>
+<p>Your entertainment destination for movie discoveries, drama reviews, recommendations, actors and the latest entertainment stories.</p>
+<a class="button" href="#explore">Explore Our Movie Room</a>
 </div>
 
 <section id="about">
-  <div class="about">
-    <h2>About Monalesa Movie Room</h2>
-    <p>
-      Welcome to Monalesa Movie Room, a home for movie lovers
-      and entertainment enthusiasts.
-
-      We bring you movie edits, drama recommendations,
-      reviews, entertainment discoveries and exciting
-      stories from different film industries.
-
-      Whether you love Korean dramas, Chinese dramas,
-      Hollywood, Nollywood or international movies,
-      there is something here for you.
-    </p>
-  </div>
+<h2>About Monalesa Movie Room</h2>
+<p>Welcome to Monalesa Movie Room, a place created for movie and drama lovers. We share exciting entertainment discoveries, movie edits, reviews, recommendations and stories from the world of film and television.</p>
+<p>From Korean dramas to Chinese and Japanese dramas, Hollywood, Nollywood and movies from around the world, there's always something exciting to discover here.</p>
 </section>
 
-<section id="movies">
-  <h2>Explore Our Entertainment World</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Korean Dramas</h3>
-      <p>Discover exciting K-dramas, unforgettable characters
-      and beautiful stories.</p>
-    </div>
-
-    <div class="card">
-      <h3>Chinese & Asian Dramas</h3>
-      <p>Explore captivating stories from different
-      Asian entertainment industries.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hollywood & International Movies</h3>
-      <p>Discover movies, actors, reviews and recommendations
-      from around the world.</p>
-    </div>
-
-    <div class="card">
-      <h3>Nollywood</h3>
-      <p>Celebrate African movies, talented actors and
-      remarkable storytelling.</p>
-    </div>
-  </div>
+<section id="explore">
+<h2>Explore Our Entertainment World</h2>
+<div class="cards">
+<div class="card">
+<h3>K-Dramas</h3>
+<p>Discover Korean dramas, unforgettable scenes, romance, action and exciting stories.</p>
+</div>
+<div class="card">
+<h3>Chinese & Japanese Dramas</h3>
+<p>Explore amazing Asian dramas, stories, characters and recommendations.</p>
+</div>
+<div class="card">
+<h3>Hollywood & Nollywood</h3>
+<p>Discover movies, actors, exciting stories and entertainment from around the world.</p>
+</div>
+<div class="card">
+<h3>Movie Reviews & Recommendations</h3>
+<p>Find your next favorite movie through reviews, recommendations and entertainment discoveries.</p>
+</div>
+<div class="card">
+<h3>Entertainment Updates</h3>
+<p>Stay connected with interesting stories, actors and happenings in the entertainment world.</p>
+</div>
+</div>
 </section>
 
 <section id="social">
-  <h2>Connect With Us</h2>
-  <p>Follow Monalesa Movie Room on social media.</p>
+<h2>Connect With Monalesa Movie Room</h2>
+<p>Follow our pages for more movie edits, entertainment updates and recommendations.</p>
+<div class="social">
+<a href="https://www.instagram.com/monal5860lesa?lqvp=MTRmeHF1dWhjdnQxdw==" target="_blank">Instagram</a>
 
-  <div class="socials">
-    <a href="#" target="_blank">Instagram</a>
-    <a href="#" target="_blank">Facebook</a>
-    <a href="#" target="_blank">TikTok</a>
-    <a href="#" target="_blank">YouTube</a>
-    <a href="#" target="_blank">Snapchat</a>
-    <a href="#" target="_blank">Threads</a>
-    <a href="#" target="_blank">X</a>
-  </div>
+<a href="https://www.facebook.com/share/1FSJSQ6wbD/" target="_blank">Facebook</a>
+
+<a href="https://www.snapchat.com/add/monalesa5860?share_id=LIxDvYUE7Mw&locale=en-GB" target="_blank">Snapchat</a>
+
+<a href="https://www.threads.com/@monal5860lesa" target="_blank">Threads</a>
+
+<a href="https://youtube.com/@monalesa-u1z?si=h3uRj5piNKzpH54x" target="_blank">YouTube</a>
+</div>
 </section>
 
 <section id="contact">
-  <div class="contact">
-    <h2>Business & Collaborations</h2>
-    <p>
-      Interested in movie promotions, brand partnerships,
-      advertising or entertainment collaborations?
-
-      We would love to hear from you.
-    </p>
-    <p>Business enquiries: Your business email will appear here.</p>
-  </div>
+<h2>Business & Collaborations</h2>
+<p>Interested in working with Monalesa Movie Room? We welcome genuine brand partnerships, collaborations and entertainment opportunities.</p>
+<p>For business enquiries, connect with us through our Instagram page.</p>
+<a class="button" href="https://www.instagram.com/monal5860lesa?lqvp=MTRmeHF1dWhjdnQxdw==" target="_blank">Contact Us</a>
 </section>
 
 <footer>
-  <p>© 2026 <span>Monalesa Movie Room</span>. All rights reserved.</p>
-  <p>Your Room for Movies, Reviews & Entertainment.</p>
+<p>© 2026 Monalesa Movie Room. All Rights Reserved.</p>
+<p>Your Room for Movies, Reviews & Entertainment.</p>
 </footer>
 
 </body>
-</html>￼Enter.about, .contact {
-  max-width: 800px;
-  margin: auto;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 30px auto 0;
-}
-
-.card {
-  background: #202020;
-  padding: 28px 20px;
-  border: 1px solid #51421d;
-  border-radius: 10px;
-}
-
-.card h3 {
-  color: #d4af37;
-  margin-bottom: 12px;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.socials a {
-  color: #d4af37;
-  border: 1px solid #d4af37;
-  padding: 9px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.socials a:hover {
-  background: #d4af37;
-  color: black;
-}
-
-footer {
-  background: #080808;
-  padding: 25px;
-  text-align: center;
-  border-top: 1px solid #d4af37;
-  color: #bbb;
-  font-size: 13px;
-}
-
-footer span {
-  color: #d4af37;
-}
-
-@media(max-width:600px) {
-  .hero h1 {
-    font-size: 29px;
-  }
-  nav {
-    gap: 12px;
-  }
+</html>
