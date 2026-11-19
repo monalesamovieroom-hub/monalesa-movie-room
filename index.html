@@ -3,114 +3,554 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MONALESA MOVIE ROOM</title>
-<meta name="description" content="Your Room for Movies, Reviews & Entertainment.">
+<meta name="theme-color" content="#120e12">
+
+<title>MONALESA MOVIE ROOM | Movies, Reviews & Entertainment</title>
+
+<meta name="description" content="Your Room for Movies, Reviews & Entertainment. Discover Korean, Chinese and Japanese dramas, movie recommendations, entertainment news and more.">
+
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:#090909;color:#fff;font-family:Arial,sans-serif;line-height:1.7}
-header{background:#111;padding:25px 15px;text-align:center;border-bottom:2px solid #d4af37}
-header h1{color:#d4af37;font-size:30px;margin:0}
-nav{padding:15px;text-align:center;background:#171717}
-nav a{color:#d4af37;text-decoration:none;margin:8px;font-size:14px}
-.hero{text-align:center;padding:75px 20px;background:linear-gradient(135deg,#30240b,#080808)}
-.hero h2{font-size:34px;color:#d4af37}
-.hero p{max-width:650px;margin:15px auto}
-.button{display:inline-block;background:#d4af37;color:#111;padding:12px 22px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:12px}
-section{padding:45px 20px;text-align:center}
-h2{color:#d4af37}
-.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
-.card{background:#171717;border:1px solid #6f5920;border-radius:9px;padding:22px;width:260px}
-.card h3{color:#d4af37}
-.social a{display:inline-block;background:#171717;color:#d4af37;border:1px solid #d4af37;padding:12px 18px;margin:7px;border-radius:5px;text-decoration:none}
-.social a:hover{background:#d4af37;color:#111}
-footer{background:#171717;text-align:center;padding:25px;color:#aaa;border-top:1px solid #d4af37}
+:root {
+  --black: #120e12;
+  --dark: #21151d;
+  --gold: #d6b36a;
+  --rose: #bd858e;
+  --pink: #f0cbd2;
+  --cream: #fff5ed;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  background: rgba(18,14,18,0.97);
+  padding: 18px 5%;
+  border-bottom: 1px solid rgba(214,179,106,0.35);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand h1 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+
+.brand p {
+  color: var(--pink);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+.hero {
+  text-align: center;
+  padding: 95px 20px;
+  background:
+    radial-gradient(circle at top right, #593340 0%, transparent 40%),
+    linear-gradient(135deg, #171017, #35202b, #120e12);
+  border-bottom: 1px solid rgba(214,179,106,0.3);
+}
+
+.hero .welcome {
+  color: var(--pink);
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.hero h2 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: clamp(32px, 7vw, 55px);
+  margin: 15px 0;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--cream);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 25px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.button:hover {
+  background: var(--pink);
+}
+
+section {
+  padding: 65px 6%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+.section-title p {
+  color: var(--pink);
+  font-size: 14px;
+}
+
+.spotlight {
+  background: linear-gradient(135deg, #261923, #171017);
+}
+
+.spotlight-card {
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid var(--rose);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background: #21151d;
+}
+
+.spotlight-poster {
+  min-height: 320px;
+  background: linear-gradient(145deg, #5c3545, #21151d, #a57b56);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.spotlight-poster h3 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: 30px;
+}
+
+.spotlight-info {
+  padding: 35px;
+}
+
+.label {
+  color: var(--pink);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.spotlight-info h3 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+.spotlight-info p {
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--dark);
+  border: 1px solid rgba(214,179,106,0.3);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pink);
+}
+
+.poster {
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #583746, #251923, #a17a62);
+}
+
+.poster h3 {
+  color: var(--cream);
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+}
+
+.card-content p {
+  color: var(--cream);
+  font-size: 13px;
+}
+
+.card-content a {
+  color: var(--pink);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.news-box {
+  text-align: center;
+  padding: 35px;
+  border: 1px solid var(--rose);
+  border-radius: 15px;
+  background: #21151d;
+}
+
+.news-box h3 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.reviews {
+  background: #21151d;
+}
+
+.social {
+  text-align: center;
+  background: linear-gradient(135deg, #261923, #120e12);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--black);
+  background: var(--gold);
+  padding: 11px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  background: var(--pink);
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: #09070a;
+  border-top: 1px solid var(--gold);
+}
+
+footer h3 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  letter-spacing: 2px;
+}
+
+footer p {
+  color: var(--pink);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+@media(max-width:650px) {
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .spotlight-card {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-poster {
+    min-height: 230px;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>MONALESA MOVIE ROOM</h1>
-<p>Your Room for Movies, Reviews & Entertainment.</p>
+  <div class="brand">
+    <h1>MONALESA MOVIE ROOM</h1>
+    <p>YOUR ROOM FOR MOVIES, REVIEWS & ENTERTAINMENT</p>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#spotlight">Spotlight</a>
+    <a href="#latest">Latest</a>
+    <a href="#kdrama">K-Drama</a>
+    <a href="#chinese">Chinese</a>
+    <a href="#japanese">Japanese</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#explore">Explore</a>
-<a href="#social">Social Platforms</a>
-<a href="#contact">Contact</a>
-</nav>
+<main>
 
-<div class="hero" id="home">
-<h2>Welcome to Monalesa Movie Room</h2>
-<p>Your entertainment destination for movie discoveries, drama reviews, recommendations, actors and the latest entertainment stories.</p>
-<a class="button" href="#explore">Explore Our Movie Room</a>
-</div>
-
-<section id="about">
-<h2>About Monalesa Movie Room</h2>
-<p>Welcome to Monalesa Movie Room, a place created for movie and drama lovers. We share exciting entertainment discoveries, movie edits, reviews, recommendations and stories from the world of film and television.</p>
-<p>From Korean dramas to Chinese and Japanese dramas, Hollywood, Nollywood and movies from around the world, there's always something exciting to discover here.</p>
+<section class="hero" id="home">
+  <p class="welcome">WELCOME TO YOUR ENTERTAINMENT WORLD</p>
+  <h2>Stories Worth Watching.<br>Entertainment Worth Sharing.</h2>
+  <p>
+    Discover captivating dramas, unforgettable movies,
+    entertainment updates and recommendations from
+    around the world.
+  </p>
+  <a href="#recommendations" class="button">EXPLORE OUR WORLD</a>
 </section>
 
-<section id="explore">
-<h2>Explore Our Entertainment World</h2>
-<div class="cards">
-<div class="card">
-<h3>K-Dramas</h3>
-<p>Discover Korean dramas, unforgettable scenes, romance, action and exciting stories.</p>
-</div>
-<div class="card">
-<h3>Chinese & Japanese Dramas</h3>
-<p>Explore amazing Asian dramas, stories, characters and recommendations.</p>
-</div>
-<div class="card">
-<h3>Hollywood & Nollywood</h3>
-<p>Discover movies, actors, exciting stories and entertainment from around the world.</p>
-</div>
-<div class="card">
-<h3>Movie Reviews & Recommendations</h3>
-<p>Find your next favorite movie through reviews, recommendations and entertainment discoveries.</p>
-</div>
-<div class="card">
-<h3>Entertainment Updates</h3>
-<p>Stay connected with interesting stories, actors and happenings in the entertainment world.</p>
-</div>
-</div>
+<section class="spotlight" id="spotlight">
+  <div class="section-title">
+    <h2>Drama Spotlight</h2>
+    <p>Discover stories making waves.</p>
+  </div>
+
+  <div class="spotlight-card">
+    <div class="spotlight-poster">
+      <h3>THE<br>REMARRIED<br>EMPRESS</h3>
+    </div>
+
+    <div class="spotlight-info">
+      <span class="label">FEATURED DRAMA</span>
+      <h3>The Remarried Empress</h3>
+      <p>
+        A crown, a broken marriage and an empress
+        determined to rewrite her destiny.
+      </p>
+      <p style="margin-top:12px;">
+        Fantasy • Romance • Drama
+      </p>
+      <a href="#recommendations" class="button">READ MORE</a>
+    </div>
+  </div>
 </section>
 
-<section id="social">
-<h2>Connect With Monalesa Movie Room</h2>
-<p>Follow our pages for more movie edits, entertainment updates and recommendations.</p>
-<div class="social">
+<section id="latest">
+  <div class="section-title">
+    <h2>Latest Entertainment</h2>
+    <p>What's happening in the entertainment world?</p>
+  </div>
 
-<a href="https://www.instagram.com/monal5860lesa?lqvp=MTRmeHF1dWhjdnQxdw==" target="_blank">Instagram</a>
+  <div class="grid">
+    <div class="news-box">
+      <h3>Drama Updates</h3>
+      <p>Discover new drama announcements, trailers and release updates.</p>
+    </div>
 
-<a href="https://www.facebook.com/share/1FSJSQ6wbD/" target="_blank">Facebook</a>
+    <div class="news-box">
+      <h3>Movie Releases</h3>
+      <p>Explore new movies and exciting upcoming releases.</p>
+    </div>
 
-<a href="https://www.snapchat.com/add/monalesa5860?share_id=LIxDvYUE7Mw&locale=en-GB" target="_blank">Snapchat</a>
-
-<a href="https://www.threads.com/@monal5860lesa" target="_blank">Threads</a>
-
-<a href="https://youtube.com/@monalesa-u1z?si=h3uRj5piNKzpH54x" target="_blank">YouTube</a>
-
-<a href="https://www.tiktok.com/@monalisa_reviews1" target="_blank">TikTok</a>
-
-<a href="https://x.com/MonaLesa586" target="_blank">X (Twitter)</a>
-
-</div>
+    <div class="news-box">
+      <h3>Celebrity News</h3>
+      <p>Stay connected with your favourite actors and stars.</p>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-<h2>Business & Collaborations</h2>
-<p>Interested in working with Monalesa Movie Room? We welcome genuine brand partnerships, collaborations and entertainment opportunities.</p>
-<p>For business enquiries, connect with us through our Instagram page.</p>
-<a class="button" href="https://www.instagram.com/monal5860lesa?lqvp=MTRmeHF1dWhjdnQxdw==" target="_blank">Contact Us</a>
+<section id="recommendations">
+  <div class="section-title">
+    <h2>Movie Recommendations</h2>
+    <p>Trending favourites and hidden gems.</p>
+  </div>
 </section>
+
+<section id="kdrama">
+  <div class="section-title">
+    <h2>K-Drama Room</h2>
+    <p>Your favourite Korean drama discoveries.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="poster"><h3>Lovely Runner</h3></div>
+      <div class="card-content">
+        <h3>Lovely Runner</h3>
+        <p>Fantasy • Romance • 2024</p>
+        <a href="#contact">EXPLORE DRAMA →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="chinese">
+  <div class="section-title">
+    <h2>Chinese Drama Room</h2>
+    <p>Beautiful stories, unforgettable characters.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="poster"><h3>Hidden Love</h3></div>
+      <div class="card-content">
+        <h3>Hidden Love</h3>
+        <p>Romance • Youth • 2023</p>
+        <a href="#contact">EXPLORE DRAMA →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="japanese">
+  <div class="section-title">
+    <h2>Japanese Drama Room</h2>
+    <p>Discover the beauty of Japanese storytelling.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="poster"><h3>First Love</h3></div>
+      <div class="card-content">
+        <h3>First Love</h3>
+        <p>Romance • Drama • 2022</p>
+        <a href="#contact">EXPLORE DRAMA →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-title">
+    <h2>Movie Reviews</h2>
+    <p>Honest opinions and stories worth discussing.</p>
+  </div>
+
+  <div class="news-box">
+    <h3>From Our Movie Room</h3>
+    <p>
+      Explore movie reviews, drama discussions and
+      recommendations from Monalesa Movie Room.
+    </p>
+  </div>
+</section>
+
+<section class="social" id="social">
+  <div class="section-title">
+    <h2>Join Our Entertainment Community</h2>
+    <p>Follow Monalesa Movie Room across our platforms.</p>
+  </div>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/monal5860lesa?lqvp=MTRmeHF1dWhjdnQxdw==" target="_blank" rel="noopener">Instagram</a>
+
+    <a href="https://www.facebook.com/share/1FSJSQ6wbD/" target="_blank" rel="noopener">Facebook</a>
+
+    <a href="https://www.snapchat.com/add/monalesa5860?share_id=LIxDvYUE7Mw&locale=en-GB" target="_blank" rel="noopener">Snapchat</a>
+
+    <a href="https://www.threads.com/@monal5860lesa" target="_blank" rel="noopener">Threads</a>
+
+    <a href="https://youtube.com/@monalesa-u1z?si=h3uRj5piNKzpH54x" target="_blank" rel="noopener">YouTube</a>
+
+    <a href="https://www.tiktok.com/@monalisa_reviews1" target="_blank" rel="noopener">TikTok</a>
+
+    <a href="https://x.com/MonaLesa586" target="_blank" rel="noopener">X</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Business & Collaborations</h2>
+    <p>Let's create something exciting together.</p>
+  </div>
+
+  <div class="news-box">
+    <h3>Work With Monalesa Movie Room</h3>
+    <p>
+      Open to brand partnerships, promotional opportunities
+      and entertainment collaborations.
+    </p>
+  </div>
+</section>
+
+</main>
 
 <footer>
-<p>© 2026 Monalesa Movie Room. All Rights Reserved.</p>
-<p>Your Room for Movies, Reviews & Entertainment.</p>
+  <h3>MONALESA MOVIE ROOM</h3>
+  <p>Your Room for Movies, Reviews & Entertainment.</p>
+  <p>© 2026 Monalesa Movie Room. All Rights Reserved.</p>
 </footer>
 
 </body>
